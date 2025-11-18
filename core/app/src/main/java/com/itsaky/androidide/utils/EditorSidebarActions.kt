@@ -44,6 +44,11 @@ import com.itsaky.androidide.actions.internal.DefaultActionsRegistry
 import com.itsaky.androidide.actions.sidebar.BuildVariantsSidebarAction
 import com.itsaky.androidide.actions.sidebar.CloseProjectSidebarAction
 import com.itsaky.androidide.actions.sidebar.FileTreeSidebarAction
+import com.itsaky.androidide.actions.sidebar.FirebaseSidebarAction
+import com.itsaky.androidide.actions.sidebar.GeminiSidebarAction
+import com.itsaky.androidide.actions.sidebar.GitHubSidebarAction
+import com.itsaky.androidide.actions.sidebar.GoogleCloudSidebarAction
+import com.itsaky.androidide.actions.sidebar.GoogleWorkspaceSidebarAction
 import com.itsaky.androidide.actions.sidebar.PreferencesSidebarAction
 import com.itsaky.androidide.actions.sidebar.TerminalSidebarAction
 import com.itsaky.androidide.fragments.sidebar.EditorSidebarFragment
@@ -67,6 +72,11 @@ internal object EditorSidebarActions {
     registry.registerAction(FileTreeSidebarAction(context, ++order))
     registry.registerAction(BuildVariantsSidebarAction(context, ++order))
     registry.registerAction(TerminalSidebarAction(context, ++order))
+    registry.registerAction(FirebaseSidebarAction(context, ++order))
+    registry.registerAction(GoogleCloudSidebarAction(context, ++order))
+    registry.registerAction(GitHubSidebarAction(context, ++order))
+    registry.registerAction(GoogleWorkspaceSidebarAction(context, ++order))
+    registry.registerAction(GeminiSidebarAction(context, ++order))
     registry.registerAction(PreferencesSidebarAction(context, ++order))
     registry.registerAction(CloseProjectSidebarAction(context, ++order))
   }
@@ -103,7 +113,7 @@ internal object EditorSidebarActions {
         // this action does not show any fragment
         // execute the action instead
         (actionsRegistry as DefaultActionsRegistry).executeAction(action, actionsData)
-        return@FillMenuParams true
+        return@FillMenuleParams true
       }
 
       return@FillMenuParams try {

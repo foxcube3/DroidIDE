@@ -1,16 +1,17 @@
+
 [versions]
-agp = "8.5.0"
-agp-tooling = "8.5.0"
-gradle-tooling = "8.6"
+agp = "8.5.1"
+agp-tooling = "8.5.1"
+gradle-tooling = "8.9"
 junit-jupiter = "5.10.2"
-kotlin = "1.9.24"
+kotlin = "2.0.0"
 kotlin-coroutines = "1.8.1"
 tree-sitter = "4.3.1"
 editor = "0.23.4-ce8de8e-SNAPSHOT"
 glide = "4.16.0"
 androidx-vectordrawable = "1.2.0"
 androidx-navigation = "2.7.7"
-ksp = "1.9.24-1.0.20"
+ksp = "2.0.0-1.0.21"
 antlr4 = "4.13.1"
 androidx-work = "2.9.0"
 androidx-espresso = "3.5.1"
@@ -21,6 +22,12 @@ logback = "1.5.3"
 realm = "10.18.0"
 benchmark = "1.2.4"
 benchmark-junit4 = "1.2.4"
+firebase-admin = "9.3.0"
+firebase-sdk = "33.1.1"
+google-cloud-sdk = "478.0.0"
+github-sdk = "1.321.0"
+gemini-cli = "0.5.0"
+google-workspace-sdk = "1.3.0"
 
 [libraries]
 
@@ -45,6 +52,20 @@ androidide-ts-json = { module = "com.itsaky.androidide.treesitter:tree-sitter-js
 androidide-ts-kotlin = { module = "com.itsaky.androidide.treesitter:tree-sitter-kotlin", version.ref = "tree-sitter" }
 androidide-ts-log = { module = "com.itsaky.androidide.treesitter:tree-sitter-log", version.ref = "tree-sitter" }
 androidide-ts-xml = { module = "com.itsaky.androidide.treesitter:tree-sitter-xml", version.ref = "tree-sitter" }
+androidide-ts-html = { module = "com.itsaky.androidide.treesitter:tree-sitter-html", version.ref = "tree-sitter" }
+androidide-ts-python = { module = "com.itsaky.androidide.treesitter:tree-sitter-python", version.ref = "tree-sitter" }
+androidide-ts-sql = { module = "com.itsaky.androidide.treesitter:tree-sitter-sql", version.ref = "tree-sitter" }
+androidide-ts-php = { module = "com.itsaky.androidide.treesitter:tree-sitter-php", version.ref = "tree-sitter" }
+androidide-ts-typescript = { module = "com.itsaky.androidide.treesitter:tree-sitter-typescript", version.ref = "tree-sitter" }
+androidide-ts-markdown = { module = "com.itsaky.androidide.treesitter:tree-sitter-markdown", version.ref = "tree-sitter" }
+androidide-ts-rust = { module = "com.itsaky.androidide.treesitter:tree-sitter-rust", version.ref = "tree-sitter" }
+androidide-ts-go = { module = "com.itsaky.androidide.treesitter:tree-sitter-go", version.ref = "tree-sitter" }
+androidide-ts-react = { module = "com.itsaky.androidide.treesitter:tree-sitter-react", version.ref = "tree-sitter" }
+androidide-ts-ruby = { module = "com.itsaky.androidide.treesitter:tree-sitter-ruby", version.ref = "tree-sitter" }
+androidide-ts-c-sharp = { module = "com.itsaky.androidide.treesitter:tree-sitter-c-sharp", version.ref = "tree-sitter" }
+androidide-ts-c-plus-plus = { module = "com.itsaky.androidide.treesitter:tree-sitter-c-plus-plus", version.ref = "tree-sitter" }
+androidide-ts-javascript = { module = "com.itsaky.androidide.treesitter:tree-sitter-javascript", version.ref = "tree-sitter" }
+androidide-ts-abap = { module = "com.itsaky.androidide.treesitter:tree-sitter-abap", version.ref = "tree-sitter" }
 
 # Common
 common-editor = { module = "io.github.Rosemoe.sora-editor:editor", version.ref = "editor" }
@@ -167,6 +188,12 @@ kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 nav-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "androidx-navigation" }
 maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "maven-publish-plugin" }
 androidx-benchmark-junit4 = { group = "androidx.benchmark", name = "benchmark-junit4", version.ref = "benchmark-junit4" }
+firebase-admin = { module = "com.google.firebase:firebase-admin", version.ref = "firebase-admin" }
+firebase-sdk = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-sdk" }
+google-cloud-sdk = { module = "com.google.cloud:google-cloud-sdk", version.ref = "google-cloud-sdk" }
+github-sdk = { module = "org.kohsuke:github-api", version.ref = "github-sdk" }
+gemini-cli = { module = "com.google.gemini:gemini-cli", version.ref = "gemini-cli" }
+google-workspace-sdk = { module = "com.google.workspace:google-workspace-sdk", version.ref = "google-workspace-sdk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -40,6 +40,19 @@ dependencies {
     api(libs.androidide.ts) {
         isChanging = true
     }
+    api(libs.androidide.ts.html)
+    api(libs.androidide.ts.python)
+    api(libs.androidide.ts.sql)
+    api(libs.androidide.ts.php)
+    api(libs.androidide.ts.typescript)
+    api(libs.androidide.ts.markdown)
+    api(libs.androidide.ts.rust)
+    api(libs.androidide.ts.go)
+    api(libs.androidide.ts.ruby)
+    api(libs.androidide.ts.c.sharp)
+    api(libs.androidide.ts.c.plus.plus)
+    api(libs.androidide.ts.javascript)
+    api(libs.androidide.ts.abap)
     api(libs.androidx.collection)
 
     api(projects.core.common)
