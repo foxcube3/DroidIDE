@@ -36,8 +36,8 @@ subprojects {
       }
 
       compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
       }
 
       buildTypes.register("dev") {
@@ -48,6 +48,6 @@ subprojects {
   }
 
   tasks.withType(KotlinCompile::class.java) {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "1.8"
   }
 }

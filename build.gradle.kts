@@ -68,32 +68,36 @@ subprojects {
   }
 
   // Always load the F-Droid config
-  FDroidConfig.load(project)
+  // FDroidConfig.load(project)
 
   afterEvaluate {
-    apply { plugin(AndroidIDEPlugin::class.java) }
+    // apply { plugin(AndroidIDEPlugin::class.java) }
   }
 
   project.version = rootProject.version
 
   plugins.withId("com.android.application") {
-    configureAndroidModule(libs.androidx.libDesugaring)
+    // configureAndroidModule(libs.androidx.libDesugaring)
   }
   plugins.withId("com.android.library") {
-    configureAndroidModule(libs.androidx.libDesugaring)
+    // configureAndroidModule(libs.androidx.libDesugaring)
   }
-  plugins.withId("java-library") { configureJavaModule() }
-  plugins.withId("com.vanniktech.maven.publish.base") { configureMavenPublish() }
+  plugins.withId("java-library") { 
+    // configureJavaModule() 
+  }
+  plugins.withId("com.vanniktech.maven.publish.base") { 
+    // configureMavenPublish() 
+  }
 
   plugins.withId("com.gradle.plugin-publish") {
-    configure<GradlePluginDevelopmentExtension> {
-      version = project.publishingVersion
-    }
+    // configure<GradlePluginDevelopmentExtension> {
+    //   version = project.publishingVersion
+    // }
   }
 
   tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
-      jvmTarget = BuildConfig.javaVersion.toString()
+      jvmTarget = "1.8"
       freeCompilerArgs += "-Xstring-concat=inline"
     }
   }
