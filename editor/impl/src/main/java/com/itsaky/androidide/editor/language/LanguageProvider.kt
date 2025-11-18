@@ -1,10 +1,13 @@
 package com.itsaky.androidide.editor.language
 
+import com.itsaky.androidide.editor.language.treesitter.GroovyLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.HtmlLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.JavaLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.JsonLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.KotlinLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.LogLanguageSpec
+import com.itsaky.androidide.editor.language.treesitter.PythonLanguageSpec
+import com.itsaky.androidide.editor.language.treesitter.SqlLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.TreeSitterLanguageProvider
 import com.itsaky.androidide.editor.language.treesitter.TreeSitterLanguageSpec
 import com.itsaky.androidide.editor.language.treesitter.XMLLanguageSpec
@@ -26,7 +29,10 @@ object LanguageProvider {
             XMLLanguageSpec(),
             JsonLanguageSpec(),
             LogLanguageSpec(),
-            HtmlLanguageSpec()
+            HtmlLanguageSpec(),
+            PythonLanguageSpec(),
+            SqlLanguageSpec(),
+            GroovyLanguageSpec()
         ).forEach { spec ->
             spec.fileExtensions.forEach { ext ->
                 treeSitterLanguages[ext] = spec

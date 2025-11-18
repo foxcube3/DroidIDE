@@ -27,7 +27,8 @@ plugins {
 
 android {
     namespace = "com.termux.emulator"
-    ndkVersion = BuildConfig.ndkVersion
+    ndkVersion = "27.0.12077973"
+    ndkPath = "/opt/nix/store/9wkh370j1qq1vjs40b2fy7cbfvbqgdpc-androidsdk/libexec/android-sdk/ndk-bundle"
 
     defaultConfig {
         externalNativeBuild {

@@ -10,7 +10,7 @@
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
- *
+*
  *  You should have received a copy of the GNU General Public License
  *   along with AndroidIDE.  If not, see <https://www.gnu.org/licenses/>.
  */
@@ -19,6 +19,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   `kotlin-dsl`
+   `java-gradle-plugin`
 }
 
 repositories {
@@ -32,12 +33,18 @@ tasks.withType<KotlinCompile> {
 }
 
 dependencies {
+  gradleApi()
+
   implementation(projects.buildLogic.common)
   implementation(projects.buildLogic.desugaring)
   implementation(projects.buildLogic.propertiesParser)
 
   implementation("com.android.tools.build:gradle:${libs.versions.agp.asProvider().get()}")
+  implementation("com.android.tools.build:gradle-api:${libs.versions.agp.asProvider().get()}")
   implementation(libs.maven.publish)
+  
+  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin-api:${libs.versions.kotlin.asProvider().get()}")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${libs.versions.kotlin.asProvider().get()}")
 
   implementation(libs.common.jkotlin)
   implementation(libs.common.antlr4)

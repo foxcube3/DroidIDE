@@ -64,14 +64,23 @@ dependencyResolutionManagement {
       }
     }
   }
+  
+  includeBuild("composite-builds/tooling") {
+    name = "gradle-tooling-api-build"
+    dependencySubstitution {
+        substitute(module("com.itsaky.androidide.gradle:gradle-tooling-api"))
+            .using(project(":"))
+    }
+  }
 
   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
+    maven { url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
     google()
     mavenCentral()
-    maven { url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
     maven { url = uri("https://s01.oss.sonatype.org/content/groups/public/") }
     maven { url = uri("https://jitpack.io") }
+    maven { setUrl("https://itsaky.com/maven/") }
   }
 }
 
@@ -88,7 +97,7 @@ val isGitRepo by lazy {
   cmdOutput("git", "rev-parse", "--is-inside-work-tree").trim() == "true"
 }
 
-private fun cmdOutput(vararg args: String): String {
+fun cmdOutput(vararg args: String): String {
   return ProcessBuilder(*args)
     .directory(File("."))
     .redirectErrorStream(true)

@@ -1,3 +1,9 @@
 [submodule "composite-builds/external/logback-android"]
 	path = composite-builds/external/logback-android
 	url = https://github.com/AndroidIDEOfficial/logback-android
+[submodule "composite-builds/tree-sitter"]
+	path = composite-builds/tree-sitter
+	url = https://github.com/bonede/tree-sitter-ng
+[submodule "composite-builds/tooling"]
+	path = composite-builds/tooling
+	url = https://github.com/android-zeros/ZeroStudio-gradle-tooling-api.git

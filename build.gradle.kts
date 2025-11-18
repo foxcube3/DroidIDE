@@ -38,7 +38,17 @@ plugins {
   alias(libs.plugins.benchmark) apply false
 }
 
+// Explicitly set file encoding for the build-logic.root-project plugin
+System.setProperty("file.encoding", "UTF-8")
+
 buildscript {
+  repositories {
+    mavenCentral()
+    google()
+    maven {
+      url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+    }
+  }
   dependencies {
     classpath(libs.kotlin.gradle.plugin)
     classpath(libs.nav.safe.args.gradle.plugin)

@@ -36,14 +36,14 @@ java {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-//noinspection UseTomlInstead GradleDynamicVersion
+//noinspection UseTomlInstead
 dependencies {
-    compileOnly("org.codehaus.janino:janino:+")
-    compileOnly("org.codehaus.janino:commons-compiler:+")
-    compileOnly("org.fusesource.jansi:jansi:+")
-    compileOnly("jakarta.mail:jakarta.mail-api:+")
-    compileOnly("jakarta.servlet:jakarta.servlet-api:+")
+    compileOnly("org.codehaus.janino:janino:3.1.9")
+    compileOnly("org.codehaus.janino:commons-compiler:3.1.9")
+    compileOnly("org.fusesource.jansi:jansi:2.1.0")
+    compileOnly("jakarta.mail:jakarta.mail-api:2.0.1")
+    compileOnly("jakarta.servlet:jakarta.servlet-api:5.0.0")
 
-    testCompileOnly("org.eclipse.angus:angus-mail:+")
-    testCompileOnly("org.mockito:mockito-core:+")
+    testCompileOnly("org.eclipse.angus:angus-mail:2.1.0")
+    testCompileOnly("org.mockito:mockito-core:5.4.0")
 }
